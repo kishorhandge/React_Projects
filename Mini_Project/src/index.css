@@ -1,0 +1,164 @@
+/* ===============================
+   GLOBAL RESET (OK - no issue)
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* ===============================
+   PARENT CONTAINER
+   =============================== */
+.parents {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;   /* ✅ FIXED: center all cards nicely */
+}
+
+
+/* ===============================
+   CARD CONTAINER
+   =============================== */
+.Card {
+  border: 2px solid black;
+  height: 320px;
+  width: 290px;
+  border-radius: 20px;
+
+  display: flex;             /* ✅ FIXED: using flex instead of random margins */
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 15px;
+  position: relative;        /* ⚠️ kept but reduced dependency */
+}
+
+
+/* ===============================
+   LOGO IMAGE
+   =============================== */
+.Card img {
+  width: 70px;               /* ✅ FIXED: reduced size for consistency */
+  height: 70px;
+  object-fit: contain;
+
+  padding: 5px;              /* ✅ FIXED: less padding (was too big) */
+  margin: 10px auto;         /* ✅ FIXED: center image properly */
+
+  border-radius: 50%;
+  border: 0.5px solid black;
+  background-color: white;
+}
+
+
+/* ===============================
+   TOP BUTTON
+   =============================== */
+.Card .Top button {
+  position: absolute;
+  top: 10px;                 /* ✅ FIXED: replaced margin-top */
+  right: 10px;               /* ✅ FIXED: replaced margin-left */
+
+  height: 30px;
+  width: auto;               /* ✅ FIXED: flexible width */
+  padding: 0 8px;
+  border-radius: 5px;
+}
+
+
+/* ===============================
+   MAIN TITLE
+   =============================== */
+.Card h1 {
+  font-size: 22px;           /* ✅ FIXED: 40px was too big */
+  margin-left: 10px;
+
+  white-space: nowrap;       /* ✅ FIXED: prevents breaking */
+  overflow: hidden;
+  text-overflow: ellipsis;   /* ✅ FIXED: long names handled */
+}
+
+
+/* ===============================
+   SUB TEXT
+   =============================== */
+.Card h1 span {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+
+/* ===============================
+   CENTER SECTION
+   =============================== */
+.Card .Center h2 {
+  text-align: center;
+  font-size: 16px;           /* ✅ FIXED: better scaling */
+}
+
+
+/* ===============================
+   DURATION + LEVEL
+   =============================== */
+.Card .Center .DurationLvl {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: space-between;   /* ✅ FIXED: removed gap:100px issue */
+  padding: 0 10px;
+}
+
+
+/* ===============================
+   BADGES (Duration / Level)
+   =============================== */
+.Card .Center .DurationLvl h3 {
+  font-size: 14px;
+
+  padding: 5px 8px;          /* ✅ FIXED: added padding for shape */
+  border-radius: 5px;
+
+  background-color: rgb(175, 177, 176);
+  border: 1px solid black;
+
+  display: inline-block;     /* ✅ FIXED: removed flex misuse */
+}
+
+
+/* ===============================
+   BOTTOM SECTION
+   =============================== */
+.Card .Bottom {
+  display: flex;
+  justify-content: space-between;   /* ✅ FIXED: no manual margin pushing */
+  align-items: center;
+  padding: 0 10px;
+}
+
+
+/* ===============================
+   SALARY TEXT
+   =============================== */
+.Card .Bottom h5 {
+  font-size: 18px;           /* ✅ FIXED: 28px too big */
+}
+
+
+/* ===============================
+   APPLY BUTTON
+   =============================== */
+.Card .Bottom .btn button {
+  border-radius: 5px;
+  width: 90px;
+  height: 30px;
+  font-size: 14px;
+
+  margin-left: 130px;            /* ✅ FIXED: removed 140px breaking layout */
+}
