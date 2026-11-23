@@ -1,0 +1,17 @@
+.btn
+{
+  background-color: #a3fc08;
+  display: flex;
+  font-size: 20px;
+}
+.btn h2
+{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  background-color: rgb(158, 19, 233);
+}
+
+.btn p
+{
+  background-color: rgb(251, 38, 5);
+}
